@@ -1,0 +1,73 @@
+Film "image" "integer xresolution" [1366] "integer yresolution" [768] "string filename" "output00001.exr"
+PixelFilter "box" "float xwidth" [0.5] "float ywidth" [0.5] 
+Accelerator "bvh" 
+"string splitmethod" "sah"
+"integer maxnodeprims" [4]
+Sampler "halton"
+"integer pixelsamples" [500]
+"bool samplepixelcenter" "false"
+Integrator "path"
+"integer maxdepth" [10]
+Scale -1 1 1 #avoid the 'flipped image' bug..
+LookAt	9.826255798339844 -10.560148239135742 9.540809631347656
+	8.372115135192871 -9.189449310302734 8.54705810546875
+	-0.4564407765865326 0.4302491843700409 1.2613521814346313
+
+Camera "perspective"
+"float fov" [22.895194130645738]
+WorldBegin
+
+	AttributeBegin
+		Transform [7.843642 0.000000 0.000000 0.000000 0.000000 7.843642 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -1.191455 -0.850028 0.570984 1.000000 ]
+		Material "matte"		
+		"float sigma" [0.0]		
+		"color Kd" [ 1.0 1.0 1.0]		
+		Shape "plymesh" "string filename" ["meshes/00001/Cube_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.987762 -0.013639 0.155374 0.000000 0.087163 0.874369 -0.477370 0.000000 -0.129344 0.485070 0.864857 0.000000 -1.371832 0.795570 2.696540 1.000000 ]
+		Material "metal"		
+		"color eta" [ 0.800000011920929 0.800000011920929 0.800000011920929]		
+		"color k" [ 0.19621989130973816 0.8000000715255737 0.4391826093196869]		
+		"float roughness" [0.0]		
+		"float uroughness" [0.0]		
+		"float vroughness" [0.0]		
+		Shape "plymesh" "string filename" ["meshes/00001/Suzanne_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -4.577211 1.522632 3.241314 1.000000 ]
+		Material "mirror"		
+		"color Kr" [ 0.800000011920929 0.800000011920929 0.800000011920929]		
+		Shape "plymesh" "string filename" ["meshes/00001/Sphere_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.101127 2.916797 -2.855056 0.000000 -4.079406 0.164793 0.023862 0.000000 -0.132285 -2.852089 -2.918452 0.000000 -1.222058 10.925011 10.794379 1.000000 ]
+		AreaLightSource "diffuse" "blackbody L" [5500 		10]		
+		Shape "trianglemesh"
+		"point P" [
+		-1.0 -1.0 0.0 0.9999997615814209 -1.0 2.723060443798886e-09 1.0 1.0 0.0 -1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0		
+		]
+		"normal N" [
+		-6.807651664608727e-10 6.807651664608727e-10 1.0 -6.807651664608727e-10 6.807651664608727e-10 1.0 -6.807651664608727e-10 6.807651664608727e-10 1.0 -6.807651664608727e-10 6.807651664608727e-10 1.0 -6.807651664608727e-10 6.807651664608727e-10 1.0 -6.807651664608727e-10 6.807651664608727e-10 1.0		
+		]
+		"float st" [
+		0.0 0.0 
+		1.0 0.0 
+		1.0 1.0 
+		0.0 0.0 
+		1.0 1.0 
+		0.0 1.0 
+		]
+		"integer indices" [
+		0 1 2 3 4 5 
+		]
+	AttributeEnd
+	
+
+WorldEnd

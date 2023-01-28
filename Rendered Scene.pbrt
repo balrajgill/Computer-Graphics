@@ -1,0 +1,142 @@
+Film "image" "integer xresolution" [2000] "integer yresolution" [1500] "string filename" "output00001.exr"
+PixelFilter "box" "float xwidth" [0.5] "float ywidth" [0.5] 
+Accelerator "bvh" 
+"string splitmethod" "sah"
+"integer maxnodeprims" [4]
+Sampler "halton"
+"integer pixelsamples" [300]
+"bool samplepixelcenter" "false"
+Integrator "path"
+"integer maxdepth" [10]
+Scale -1 1 1 #avoid the 'flipped image' bug..
+LookAt	15.209213256835938 -12.080904006958008 16.47376823425293
+	9.350914001464844 -6.983066082000732 10.833752632141113
+	-2.0319674015045166 1.4813640117645264 3.4495692253112793
+
+Camera "perspective"
+"float fov" [20.356809084207093]
+WorldBegin
+
+	AttributeBegin
+		Transform [-0.873167 1.029602 0.000000 0.000000 -0.122027 -0.103486 0.000000 0.000000 0.000000 0.000000 2.040000 0.000000 -1.616184 -3.000452 2.931545 1.000000 ]
+		
+		Texture "Book.PNG" "color" "imagemap" "string filename" ["textures/Book.PNG"]		
+		Material "matte"		
+		"float sigma" [0.5]		
+		"texture Kd" "Book.PNG"		
+		Shape "plymesh" "string filename" ["meshes/00001/Cube_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [3.082445 1.859712 0.000000 0.000000 -0.206635 0.342494 0.000000 0.000000 0.000000 0.000000 2.250000 0.000000 0.372293 3.171565 2.246435 1.000000 ]
+		
+		Texture "box1.PNG" "color" "imagemap" "string filename" ["textures/box1.PNG"]		
+		Material "matte"		
+		"float sigma" [0.5]		
+		"texture Kd" "box1.PNG"		
+		Shape "plymesh" "string filename" ["meshes/00001/Cube.001_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.942032 -1.631517 0.216593 1.000000 ]
+		Material "matte"		
+		"float sigma" [0.0]		
+		"color Kd" [ 0.5209957361221313 0.8307698369026184 0.0006071031093597412]		
+		Shape "plymesh" "string filename" ["meshes/00001/Torus.013_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.959500 -0.276615 0.053323 0.000000 0.035530 -0.068948 -0.996987 0.000000 1.956207 6.709529 -0.394295 0.000000 -0.786577 1.974067 4.768341 1.000000 ]
+		Shape "plymesh" "string filename" ["meshes/00001/Cylinder_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [-1.157018 1.378880 0.000000 0.000000 -0.911593 -0.764917 0.000000 0.000000 0.000000 0.000000 0.470000 0.000000 -1.280213 -2.798265 0.470000 1.000000 ]
+		
+		Texture "box2-texture.PNG" "color" "imagemap" "string filename" ["textures/box2-texture.PNG"]		
+		Material "matte"		
+		"float sigma" [0.5]		
+		"texture Kd" "box2-texture.PNG"		
+		Shape "plymesh" "string filename" ["meshes/00001/Cube.002_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.000791 0.001837 0.000000 0.000000 -0.001837 0.000791 0.000000 0.000000 0.000000 0.000000 0.002000 0.000000 1.180090 0.638641 0.815095 1.000000 ]
+		Material "metal"		
+		"color eta" [ 0.800000011920929 0.800000011920929 0.800000011920929]		
+		"color k" [ 0.800000011920929 0.800000011920929 0.800000011920929]		
+		"float roughness" [0.0]		
+		"float uroughness" [0.0]		
+		"float vroughness" [0.0]		
+		Shape "plymesh" "string filename" ["meshes/00001/Crocodile Statue_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.420170 0.000000 0.000000 0.000000 0.000000 0.420170 0.000000 0.000000 0.000000 0.000000 0.420170 0.000000 -1.621325 3.723113 12.973467 1.000000 ]
+		AreaLightSource "diffuse" "blackbody L" [5500 		35000]		
+		Shape "plymesh" "string filename" ["meshes/00001/Sphere_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.000000 0.000000 -1.000000 0.000000 0.903522 0.428541 0.000000 0.000000 0.754233 -1.590199 0.000000 0.000000 -0.032565 2.615783 4.561529 1.000000 ]
+		Shape "plymesh" "string filename" ["meshes/00001/Cylinder.001_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [8.274059 0.000000 0.000000 0.000000 0.000000 11.147703 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.092973 0.597266 -1.000000 1.000000 ]
+		Material "matte"		
+		"float sigma" [0.0]		
+		"color Kd" [ 0.8543928265571594 0.8543928265571594 0.8543928265571594]		
+		Shape "plymesh" "string filename" ["meshes/00001/Cube.003_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.014400 0.000437 0.004176 0.000000 -0.001273 0.014671 0.002855 0.000000 -0.004002 -0.003096 0.014121 0.000000 -1.028432 -1.602504 1.222963 1.000000 ]
+		Material "matte"		
+		"float sigma" [0.0]		
+		"color Kd" [ 0.6187518835067749 0.17509831488132477 0.031040741130709648]		
+		Shape "plymesh" "string filename" ["meshes/00001/Cog fidget spinner with carvings_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.014400 0.000437 0.004176 0.000000 -0.001357 0.014603 0.003151 0.000000 -0.003974 -0.003402 0.014058 0.000000 -0.927325 -2.829737 1.214507 1.000000 ]
+		Material "mirror"		
+		"color Kr" [ 0.800000011920929 0.800000011920929 0.800000011920929]		
+		Shape "plymesh" "string filename" ["meshes/00001/Cog fidget spinner with carvings.001_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [2.719018 1.267652 0.000000 0.000000 -0.005641 0.012099 2.999970 0.000000 1.267639 -2.718991 0.013349 0.000000 0.790312 0.895825 4.562113 1.000000 ]
+		Shape "plymesh" "string filename" ["meshes/00001/Cone_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.002954 0.004012 0.000427 0.000000 -0.003401 0.002760 -0.002412 0.000000 -0.002171 0.001135 0.004359 0.000000 -0.402287 -0.367838 0.380276 1.000000 ]
+		Material "matte"		
+		"float sigma" [0.0]		
+		"color Kd" [ 0.7681512832641602 0.7011020183563232 0.5840786695480347]		
+		Shape "plymesh" "string filename" ["meshes/00001/Giraffe skull_mat0.ply"]
+	AttributeEnd
+	
+
+	AttributeBegin
+		Transform [0.014400 0.000437 0.004176 0.000000 -0.001357 0.014603 0.003151 0.000000 -0.003974 -0.003402 0.014058 0.000000 -0.142184 -1.241657 0.255481 1.000000 ]
+		Material "mirror"		
+		"color Kr" [ 0.800000011920929 0.800000011920929 0.800000011920929]		
+		Shape "plymesh" "string filename" ["meshes/00001/Cog fidget spinner with carvings.002_mat0.ply"]
+	AttributeEnd
+	
+
+WorldEnd
